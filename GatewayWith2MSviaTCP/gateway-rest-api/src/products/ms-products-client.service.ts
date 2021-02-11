@@ -2,7 +2,6 @@ import { Inject, Injectable } from '@nestjs/common';
 import { ClientProxy } from '@nestjs/microservices';
 import { CreateProductDTO } from './dto/create-product.dto';
 import { ProductDTO } from './dto/product.dto';
-import { IProduct } from './interfaces/iProduct.interface';
 
 @Injectable()
 export class MsProductsClient {
