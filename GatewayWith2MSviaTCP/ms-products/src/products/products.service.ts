@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { ForbiddenException, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { ProductDTO } from './dto/product.dto';
@@ -10,12 +10,14 @@ import { Product } from './schemas/product.schema';
 export class ProductsService {
     constructor(@InjectModel('Product') private readonly productModel: Model<Product>) { }
 
-    async create(productDTO: IProduct) {
+    async create(productDTO: IProduct): Promise<ProductDTO>   {
         const newProduct = new this.productModel(productDTO);
-        return newProduct.save();
+        return newProduct.save().catch(err => {
+            throw new ForbiddenException('Product already exists!');
+        });
     }
 
-    async findById(productId: string) {
+    async findById(productId: string): Promise<ProductDTO>  {
         let product = await this.productModel.findOne({ productId: productId }).exec();
         return new this.productModel(product);
     }
@@ -36,11 +38,14 @@ export class ProductsService {
         return productsList;
     }
 
-    async update(updateProductDTO: IUpdateProduct) {
-        return await this.productModel.findByIdAndUpdate(updateProductDTO.productId, updateProductDTO.product, { new: true });
+    async update(updateProductDTO: IUpdateProduct): Promise<ProductDTO> {
+        const result: Product = await this.productModel.findOne({ productId: updateProductDTO.productId }).exec();
+        result.productId = updateProductDTO.productId;
+        result.price = updateProductDTO.product.price;
+        return result.save();;
     }
 
     async delete(productId: string) {
-        return this.productModel.findByIdAndRemove(productId);
+        return this.productModel.remove({ productId: { $eq: productId } });
     }
 }
