@@ -17,7 +17,7 @@ import { ShoppingCartController } from './shopping-cart.controller';
             }
         }])
     ],
-    providers: [MsShoppingCartClient, LoggerService],
+    providers: [LoggerService, MsShoppingCartClient],
     controllers: [ShoppingCartController]
 })
-export class ShoppingCartModule {}
+export class ShoppingCartModule { }

@@ -1,9 +1,9 @@
 import { Body, Delete, Get, Param, Post, Put } from '@nestjs/common';
 import { Controller } from '@nestjs/common';
 import { ApiCreatedResponse, ApiOkResponse } from '@nestjs/swagger';
+import { CreateProductDTO } from 'src/dtos/create-product.dto';
+import { ProductDTO } from 'src/dtos/product.dto';
 import { LoggerService } from 'src/logger/logger.service';
-import { CreateProductDTO } from './dto/create-product.dto';
-import { ProductDTO } from './dto/product.dto';
 import { MsProductsClient } from './ms-products-client.service';
 
 @Controller('products')
