@@ -2286,11 +2286,6 @@
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       },
-      "../src/shopping-cart/interfaces/shopping-cart.interface.ts": {
-        "version": "1870d71966f693ca223cfe757e7d28341d2cacf76487aa432ba91ee7156b4930",
-        "signature": "708add242e6824e48dfeb37fb1180f221282e8882ccb49e543ed71f4bcc091f8",
-        "affectsGlobalScope": false
-      },
       "../node_modules/@types/anymatch/index.d.ts": {
         "version": "48b52264fa193879a074197839dbb4796fa07e86350ff888e5361e06aa46df76",
         "signature": "48b52264fa193879a074197839dbb4796fa07e86350ff888e5361e06aa46df76",
@@ -6718,7 +6713,6 @@
       "../src/products/ms-products-client.service.ts",
       "../src/products/products.controller.ts",
       "../src/products/products.module.ts",
-      "../src/shopping-cart/interfaces/shopping-cart.interface.ts",
       "../src/shopping-cart/ms-shopping-cart-client.service.ts",
       "../src/shopping-cart/shopping-cart.controller.ts",
       "../src/shopping-cart/shopping-cart.module.ts"
