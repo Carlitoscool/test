@@ -24,8 +24,13 @@ export class ShoppingCartService {
         return this.shoppingCartRepository.save(shoppingCart);
     }
 
-    async findById(id: string): Promise<ShoppingCartDTO> {
-        let shoppingCart: ShoppingCart = await this.shoppingCartRepository.findOne(id);
+    async findById(shoppingCartId: string): Promise<ShoppingCartDTO> {
+        let shoppingCart: ShoppingCart = await this.shoppingCartRepository.findOne({ shoppingCartId: shoppingCartId });
+        let toReturnShoppingCartDTO: ShoppingCartDTO = this.shoppingCartEntityToDTO(shoppingCart);
+        return toReturnShoppingCartDTO;
+    }
+
+    private shoppingCartEntityToDTO(shoppingCart: ShoppingCart): ShoppingCartDTO{
         let toReturnShoppingCartDTO: ShoppingCartDTO = {
             shoppingCartId: shoppingCart.shoppingCartId,
             totalPrice: shoppingCart.totalPrice,
@@ -47,6 +52,12 @@ export class ShoppingCartService {
             productsDTOList.push(productDTO);
         });
         return productsDTOList;
+    }
+
+    async delete(shoppingCartId: string): Promise<ShoppingCartDTO> {
+        let shoppingCart: ShoppingCart = await this.shoppingCartRepository.findOne({ shoppingCartId: shoppingCartId });
+        shoppingCart = await this.shoppingCartRepository.remove(shoppingCart);
+        return this.shoppingCartEntityToDTO(shoppingCart);
     }
 
 }

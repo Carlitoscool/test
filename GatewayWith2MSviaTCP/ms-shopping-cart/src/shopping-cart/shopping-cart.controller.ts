@@ -18,5 +18,16 @@ export class ShoppingCartController {
         return await this.shoppingCartService.create(shoppingCartDTO);
     }
 
+    @MessagePattern( 'delete' )
+    async delete(shoppingCartId: string): Promise<ShoppingCartDTO> {
+        this.logger.debug('Deleting a shopping-cart in ms-shopping-cart.');
+        return await this.shoppingCartService.delete(shoppingCartId);
+    }
+
+    @MessagePattern( 'findById' )
+    async findById(shoppingCartId: string): Promise<ShoppingCartDTO> {
+        this.logger.debug('Get shopping-cart by id in ms-shopping-cart.');
+        return this.shoppingCartService.findById(shoppingCartId);
+    }
 
 }
