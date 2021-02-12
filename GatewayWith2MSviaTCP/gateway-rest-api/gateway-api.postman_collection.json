@@ -1,0 +1,287 @@
+{
+	"info": {
+		"_postman_id": "7e303680-1509-46b7-83eb-95df3d13de90",
+		"name": "gateway-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}:{{localport}}/products",
+							"host": [
+								"{{localhost}}"
+							],
+							"port": "{{localport}}",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}:{{localport}}/products/:productId",
+							"host": [
+								"{{localhost}}"
+							],
+							"port": "{{localport}}",
+							"path": [
+								"products",
+								":productId"
+							],
+							"variable": [
+								{
+									"key": "productId",
+									"value": "123456"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"productId\": \"221\",\n    \"price\": 23.5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}:{{localport}}/products",
+							"host": [
+								"{{localhost}}"
+							],
+							"port": "{{localport}}",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"productId\": \"123456\",\n    \"price\": 50.3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}:{{localport}}/products/:productId",
+							"host": [
+								"{{localhost}}"
+							],
+							"port": "{{localport}}",
+							"path": [
+								"products",
+								":productId"
+							],
+							"variable": [
+								{
+									"key": "productId",
+									"value": "123456"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}:{{localport}}/products/:productId",
+							"host": [
+								"{{localhost}}"
+							],
+							"port": "{{localport}}",
+							"path": [
+								"products",
+								":productId"
+							],
+							"variable": [
+								{
+									"key": "productId",
+									"value": "222"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "shopping-cart",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"shoppingCartId\": \"1\",\n    \"userId\": \"1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}:{{localport}}/shopping-carts",
+							"host": [
+								"{{localhost}}"
+							],
+							"port": "{{localport}}",
+							"path": [
+								"shopping-carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}:{{localport}}/shopping-carts/:shoppingCartId",
+							"host": [
+								"{{localhost}}"
+							],
+							"port": "{{localport}}",
+							"path": [
+								"shopping-carts",
+								":shoppingCartId"
+							],
+							"variable": [
+								{
+									"key": "shoppingCartId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}:{{localport}}/shopping-carts/:shoppingCartId",
+							"host": [
+								"{{localhost}}"
+							],
+							"port": "{{localport}}",
+							"path": [
+								"shopping-carts",
+								":shoppingCartId"
+							],
+							"variable": [
+								{
+									"key": "shoppingCartId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addProduct",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}:{{localport}}/shopping-carts/:shoppingCartId/addProduct/:productId",
+							"host": [
+								"{{localhost}}"
+							],
+							"port": "{{localport}}",
+							"path": [
+								"shopping-carts",
+								":shoppingCartId",
+								"addProduct",
+								":productId"
+							],
+							"variable": [
+								{
+									"key": "shoppingCartId",
+									"value": "1"
+								},
+								{
+									"key": "productId",
+									"value": "222"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeProduct",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}:{{localport}}/shopping-carts/:shoppingCartId/removeProduct/:productId",
+							"host": [
+								"{{localhost}}"
+							],
+							"port": "{{localport}}",
+							"path": [
+								"shopping-carts",
+								":shoppingCartId",
+								"removeProduct",
+								":productId"
+							],
+							"variable": [
+								{
+									"key": "shoppingCartId",
+									"value": "1"
+								},
+								{
+									"key": "productId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
