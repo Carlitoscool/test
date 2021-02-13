@@ -24,17 +24,17 @@ let MsShoppingCartClient = class MsShoppingCartClient {
     async create(shoppingCartDTO) {
         return await this.msShoppingCartClient.send('create', shoppingCartDTO).toPromise();
     }
-    async delete(shoopingCartId) {
-        return await this.msShoppingCartClient.send('delete', shoopingCartId).toPromise();
+    async delete(shoppingCartId) {
+        return await this.msShoppingCartClient.send('delete', shoppingCartId).toPromise();
     }
-    async findById(shoopingCartId) {
-        return await this.msShoppingCartClient.send('findById', shoopingCartId).toPromise();
+    async findById(shoppingCartId) {
+        return await this.msShoppingCartClient.send('findById', shoppingCartId).toPromise();
     }
-    async addProduct(shoopingCartId, productId) {
-        return await this.msShoppingCartClient.send('addProduct', [shoopingCartId, productId]).toPromise();
+    async addProduct(shoppingCartId, productId) {
+        return await this.msShoppingCartClient.send('addProduct', { shoppingCartId, productId }).toPromise();
     }
-    async removeProduct(shoopingCartId, productId) {
-        return await this.msShoppingCartClient.send('removeProduct', [shoopingCartId, productId]).toPromise();
+    async removeProduct(shoppingCartId, productId) {
+        return await this.msShoppingCartClient.send('removeProduct', { shoppingCartId, productId }).toPromise();
     }
 };
 MsShoppingCartClient = __decorate([

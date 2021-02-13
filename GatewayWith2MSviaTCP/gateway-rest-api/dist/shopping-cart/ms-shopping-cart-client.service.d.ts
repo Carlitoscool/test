@@ -5,8 +5,8 @@ export declare class MsShoppingCartClient {
     private readonly msShoppingCartClient;
     constructor(msShoppingCartClient: ClientProxy);
     create(shoppingCartDTO: CreateShoppingCartDTO): Promise<ShoppingCartDTO>;
-    delete(shoopingCartId: string): Promise<ShoppingCartDTO>;
-    findById(shoopingCartId: string): Promise<ShoppingCartDTO>;
-    addProduct(shoopingCartId: string, productId: string): Promise<ShoppingCartDTO>;
-    removeProduct(shoopingCartId: string, productId: string): Promise<ShoppingCartDTO>;
+    delete(shoppingCartId: string): Promise<ShoppingCartDTO>;
+    findById(shoppingCartId: string): Promise<ShoppingCartDTO>;
+    addProduct(shoppingCartId: string, productId: string): Promise<ShoppingCartDTO>;
+    removeProduct(shoppingCartId: string, productId: string): Promise<ShoppingCartDTO>;
 }

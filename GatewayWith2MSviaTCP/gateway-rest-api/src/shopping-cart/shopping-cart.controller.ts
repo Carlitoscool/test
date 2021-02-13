@@ -36,15 +36,15 @@ export class ShoppingCartController {
     }
 
     @ApiOkResponse({ type: ShoppingCartDTO })
-    @Put(':id/addProduct/:productId')
-    async addProduct(@Param('id') shoppingCartId: string, @Param('productId') productId: string): Promise<ShoppingCartDTO> {
+    @Put(':shoppingCartId/addProduct/:productId')
+    async addProduct(@Param('shoppingCartId') shoppingCartId: string, @Param('productId') productId: string): Promise<ShoppingCartDTO> {
         this.logger.debug('Add product to shopping cart Endpoint');
         return this.msShoppingCartClient.addProduct(shoppingCartId, productId);
     }
 
     @ApiOkResponse({ type: ShoppingCartDTO })
-    @Put(':id/removeProduct/:productId')
-    async removeProduct(@Param('id') shoppingCartId: string, @Param('productId') productId: string): Promise<ShoppingCartDTO> {
+    @Put(':shoppingCartId/removeProduct/:productId')
+    async removeProduct(@Param('shoppingCartId') shoppingCartId: string, @Param('productId') productId: string): Promise<ShoppingCartDTO> {
         this.logger.debug('Remove product product to shopping cart Endpoint');
         return this.msShoppingCartClient.removeProduct(shoppingCartId, productId);
     }

@@ -2257,12 +2257,12 @@
         "affectsGlobalScope": false
       },
       "../src/shopping-cart/ms-shopping-cart-client.service.ts": {
-        "version": "44226772bd5f7003b59f2b9de2a8d2f351f16da6347ceaed689a34c85f8ef966",
-        "signature": "48b19690daf8e229ba53e6981f69ca6d7c2cd2aed6110eb5c07f584ad98553e1",
+        "version": "dcd728e3dd66d87cb3eee7ee01f9677720a6b7a6ab4d1dd5d4aff03ee95337b6",
+        "signature": "34d50791e0c304a80ddf360731e448d2a935c8d492bd6f4bef8226a9867b8589",
         "affectsGlobalScope": false
       },
       "../src/shopping-cart/shopping-cart.controller.ts": {
-        "version": "9e9e7474820e1f0ddfe36051dd8153b8aba828a713f3fd8c306f92b950ad9ca3",
+        "version": "79f14ddfecc6f4680470f6c4452590ec7a8d4dee101a9cf4acfa6c3f14f1271f",
         "signature": "b75eb0b75a651d44f219384695354df726fb40e8f5679d3ffe06bc2a40112113",
         "affectsGlobalScope": false
       },

@@ -72,16 +72,16 @@ __decorate([
 ], ShoppingCartController.prototype, "findById", null);
 __decorate([
     swagger_1.ApiOkResponse({ type: shopping_cart_dto_1.ShoppingCartDTO }),
-    common_1.Put(':id/addProduct/:productId'),
-    __param(0, common_1.Param('id')), __param(1, common_1.Param('productId')),
+    common_1.Put(':shoppingCartId/addProduct/:productId'),
+    __param(0, common_1.Param('shoppingCartId')), __param(1, common_1.Param('productId')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String, String]),
     __metadata("design:returntype", Promise)
 ], ShoppingCartController.prototype, "addProduct", null);
 __decorate([
     swagger_1.ApiOkResponse({ type: shopping_cart_dto_1.ShoppingCartDTO }),
-    common_1.Put(':id/removeProduct/:productId'),
-    __param(0, common_1.Param('id')), __param(1, common_1.Param('productId')),
+    common_1.Put(':shoppingCartId/removeProduct/:productId'),
+    __param(0, common_1.Param('shoppingCartId')), __param(1, common_1.Param('productId')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String, String]),
     __metadata("design:returntype", Promise)

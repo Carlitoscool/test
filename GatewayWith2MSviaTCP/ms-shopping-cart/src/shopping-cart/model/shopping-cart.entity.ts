@@ -15,7 +15,7 @@ export class ShoppingCart {
     @Index({ unique: true })
     public userId: string;
 
-    @Column()
+    @Column({ type: 'numeric', precision: 10, scale: 2 })
     public totalPrice: number;
 
     @Column()

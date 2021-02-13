@@ -1,13 +1,9 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { LoggerService } from './logger/logger.service';
 import { LoggerModule } from './logger/logger.module';
-import { ShoppingCartController } from './shopping-cart/shopping-cart.controller';
-import { ShoppingCartService } from './shopping-cart/shopping-cart.service';
 import { ShoppingCartModule } from './shopping-cart/shopping-cart.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { MsProductsClientModule } from './ms-products-client/ms-products-client.module';
 import Product from './shopping-cart/model/product.entity';
 import ShoppingCart from './shopping-cart/model/shopping-cart.entity';
 
@@ -31,7 +27,8 @@ import ShoppingCart from './shopping-cart/model/shopping-cart.entity';
     }),
     LoggerModule,
     ShoppingCartModule,
-    ConfigModule.forRoot()
+    ConfigModule.forRoot(),
+    MsProductsClientModule
   ],
   exports: [ConfigModule]
 })

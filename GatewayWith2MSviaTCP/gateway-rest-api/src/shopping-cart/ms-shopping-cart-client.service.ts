@@ -12,20 +12,20 @@ export class MsShoppingCartClient {
         return await this.msShoppingCartClient.send('create', shoppingCartDTO).toPromise();
     }
 
-    async delete(shoopingCartId: string): Promise<ShoppingCartDTO> {
-        return await this.msShoppingCartClient.send('delete', shoopingCartId).toPromise();
+    async delete(shoppingCartId: string): Promise<ShoppingCartDTO> {
+        return await this.msShoppingCartClient.send('delete', shoppingCartId).toPromise();
     }
 
-    async findById(shoopingCartId: string): Promise<ShoppingCartDTO> {
-        return await this.msShoppingCartClient.send('findById', shoopingCartId).toPromise();
+    async findById(shoppingCartId: string): Promise<ShoppingCartDTO> {
+        return await this.msShoppingCartClient.send('findById', shoppingCartId).toPromise();
     }
 
-    async addProduct(shoopingCartId: string, productId: string): Promise<ShoppingCartDTO> {
-        return await this.msShoppingCartClient.send('addProduct', [shoopingCartId, productId]).toPromise();
+    async addProduct(shoppingCartId: string, productId: string): Promise<ShoppingCartDTO> {
+        return await this.msShoppingCartClient.send('addProduct', {shoppingCartId, productId}).toPromise();
     }
 
-    async removeProduct(shoopingCartId: string, productId: string): Promise<ShoppingCartDTO> {
-        return await this.msShoppingCartClient.send('removeProduct', [shoopingCartId, productId]).toPromise();
+    async removeProduct(shoppingCartId: string, productId: string): Promise<ShoppingCartDTO> {
+        return await this.msShoppingCartClient.send('removeProduct', {shoppingCartId, productId}).toPromise();
     }
 
 }

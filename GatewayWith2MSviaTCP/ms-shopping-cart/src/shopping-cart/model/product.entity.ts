@@ -1,4 +1,4 @@
-import { Column, Entity, Index, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 import ShoppingCart from "./shopping-cart.entity";
 
 @Entity()
@@ -8,10 +8,9 @@ export class Product {
     public id: number;
 
     @Column()
-    @Index({ unique: true })
     public productId: string;
 
-    @Column()
+    @Column({ type: 'numeric', precision: 10, scale: 2 })
     public price: number;
 
     @Column()
