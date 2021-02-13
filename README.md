@@ -140,4 +140,4 @@ As aplicações desenvolvidas têm um ficheiro .env onde estão as properties es
     nest start 
 
 ## Collection do Postman
-    Obter [aqui](./GatewayWith2MSviaTCP/gateway-rest-api/gateway-api.postman_collection.json) collection do postman.
+   Obter [aqui](./GatewayWith2MSviaTCP/gateway-rest-api/gateway-api.postman_collection.json) collection do postman.
