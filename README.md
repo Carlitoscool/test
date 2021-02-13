@@ -141,3 +141,11 @@ As aplicações desenvolvidas têm um ficheiro .env onde estão as properties es
 
 ## Collection do Postman
    Obter [aqui](./GatewayWith2MSviaTCP/gateway-rest-api/gateway-api.postman_collection.json) collection do postman.
+
+<br>
+
+# Testes Unitários
+
+![unitTests](./imgs/unitTests.png)
+
+Os testes unitários foram efetuados apenas na aplicação gateway-rest-api.
