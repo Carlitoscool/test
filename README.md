@@ -109,7 +109,7 @@ As aplicações desenvolvidas têm um ficheiro .env onde estão as properties es
     Dentro do ficheiro docker-compose.yml está também uma aplicação denominada de pgadmin que após arranque da Docker image permitirá aceder a um GUI para a DB.
  
     Instruções: 
-        - Posicionar-se na pasta do ms-shopping-cart e correr o comando "docker compose up" no terminal/powershell.
+        - Posicionar-se na pasta do ms-shopping-cart e correr o comando "docker-compose up" no terminal/powershell.
 
         - Para ver a DB abrir o browser e correr http://localhost:8080 e colocar os dados de login configurados no ficheiro docker.env (usr:admin@admin.com || pwd:admin). 
 
@@ -120,7 +120,7 @@ As aplicações desenvolvidas têm um ficheiro .env onde estão as properties es
     Dentro do ficheiro docker-compose.yml está também uma aplicação denominada de mongoclient que após arranque da Docker image permitirá aceder a um GUI para a DB.
 
         Instruções: 
-        - Posicionar-se na pasta do ms-products e correr o comando "docker compose up" no terminal/powershell.
+        - Posicionar-se na pasta do ms-products e correr o comando "docker-compose up" no terminal/powershell.
 
         - Para ver a DB abrir o browser e correr http://localhost:3030.
 

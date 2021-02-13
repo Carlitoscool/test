@@ -51,7 +51,7 @@ export class ShoppingCartService {
         let productDTO = await this.msProductsClient.findById(iUpdateShoppingCart.productId);
 
         if (!productDTO.productId) {
-            throw new Error('O produto não existe!');
+            throw new Error(`That product doesn't exist !`);
         }
 
         // If product already exists.
@@ -85,7 +85,7 @@ export class ShoppingCartService {
         let shoppingCartEntity: ShoppingCart = await this.shoppingCartRepository.findOne({ shoppingCartId: iUpdateShoppingCart.shoppingCartId });
         let productDTO = await this.msProductsClient.findById(iUpdateShoppingCart.productId);
         if (shoppingCartEntity.products.length == 0) {
-            throw new Error('O carrinho está vazio.');
+            throw new Error('Shopping cart is empty.');
         } else {
             for (let prodEntity of shoppingCartEntity.products) {
                 if (prodEntity.productId == productDTO.productId) {
