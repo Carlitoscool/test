@@ -2232,8 +2232,8 @@
         "affectsGlobalScope": false
       },
       "../src/products/products.controller.ts": {
-        "version": "79748b17085d8f694f530fa66c620e4d305eafc37405679158ff0da67a75f828",
-        "signature": "fa6ff22ae81079ecf0f7424e401ae54e477c783e679ce8e703e214c7b0b369e8",
+        "version": "3e07e681351c05175477075ce4a999b20bfea1dc6648797ce9a3ab1d62825a4a",
+        "signature": "493c41e112836baa98a874fc3072ecced0cc832371a3a591ede6df59f7a1125d",
         "affectsGlobalScope": false
       },
       "../src/products/products.module.ts": {
@@ -2284,6 +2284,11 @@
       "../src/main.ts": {
         "version": "6c6bf3e62504498a414535f5c1e5ecab2c67579c82192880d7de605c2de25890",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+        "affectsGlobalScope": false
+      },
+      "../src/products/unit-test-mock.ts": {
+        "version": "42c6a6abc5c5def0909e8292749c19d8bdf6cce8ba8c375bddd5b7ce486628fa",
+        "signature": "521a6c510bce8cbc0df6de1886f7d5d04e144cbfce716171bc266f643f37dc9e",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/anymatch/index.d.ts": {
@@ -6711,8 +6716,6 @@
       "../src/main.ts",
       "../src/products/interfaces/iproduct.interface.ts",
       "../src/products/ms-products-client.service.ts",
-      "../src/products/products.controller.ts",
-      "../src/products/products.module.ts",
       "../src/shopping-cart/ms-shopping-cart-client.service.ts",
       "../src/shopping-cart/shopping-cart.controller.ts",
       "../src/shopping-cart/shopping-cart.module.ts"

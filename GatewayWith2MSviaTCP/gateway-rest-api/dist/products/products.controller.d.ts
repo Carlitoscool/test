@@ -1,6 +1,6 @@
-import { CreateProductDTO } from 'src/dtos/create-product.dto';
-import { ProductDTO } from 'src/dtos/product.dto';
-import { LoggerService } from 'src/logger/logger.service';
+import { CreateProductDTO } from '../dtos/create-product.dto';
+import { ProductDTO } from '../dtos/product.dto';
+import { LoggerService } from '../logger/logger.service';
 import { MsProductsClient } from './ms-products-client.service';
 export declare class ProductsController {
     private readonly msProductsClient;

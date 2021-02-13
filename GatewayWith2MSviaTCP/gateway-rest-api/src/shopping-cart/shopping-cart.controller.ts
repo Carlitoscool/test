@@ -1,8 +1,7 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 import { ApiCreatedResponse, ApiOkResponse } from '@nestjs/swagger';
-import { CreateShoppingCartDTO } from 'src/dtos/create-shopping-cart';
-import { ProductDTO } from 'src/dtos/product.dto';
-import { LoggerService } from 'src/logger/logger.service';
+import { CreateShoppingCartDTO } from '../dtos/create-shopping-cart';
+import { LoggerService } from '../logger/logger.service';
 import { ShoppingCartDTO } from '../dtos/shopping-cart.dto';
 import { MsShoppingCartClient } from './ms-shopping-cart-client.service';
 

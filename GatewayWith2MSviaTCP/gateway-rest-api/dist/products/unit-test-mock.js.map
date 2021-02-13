@@ -1,0 +1,1 @@
+{"version":3,"file":"unit-test-mock.js","sourceRoot":"","sources":["../../src/products/unit-test-mock.ts"],"names":[],"mappings":";;;AAsBA,SAAgB,IAAI,CAAI,GAAG,aAAkC;IAC3D,MAAM,eAAe,GAAkC,EAAE,CAAC;IAC1D,aAAa,CAAC,OAAO,CAAC,YAAY,CAAC,EAAE,CAAC,CAAC,eAAe,CAAC,YAAY,CAAC,GAAG,IAAI,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC;IACnF,OAAO,eAAiC,CAAC;AAC3C,CAAC;AAJD,oBAIC"}
